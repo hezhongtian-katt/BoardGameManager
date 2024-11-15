@@ -1,0 +1,14 @@
+<!-- src/main/resources/templates/game_details.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Game Details</title>
+</head>
+<body>
+    <h1>Game Details</h1>
+    <p><strong>Name:</strong> <span th:text="${game.name}">Game Name</span></p>
+    <p><strong>Type:</strong> <span th:text="${game.type}">Game Type</span></p>
+    <p><strong>Description:</strong> <span th:text="${game.description}">Game Description</span></p>
+    <a href="/games" th:href="@{/games}">Back to List</a>
+</body>
+</html>

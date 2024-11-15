@@ -1,0 +1,19 @@
+<!-- src/main/resources/templates/update_game.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Game</title>
+</head>
+<body>
+    <h1>Update Game</h1>
+    <form action="#" th:action="@{/games/update/{id}(id=${game.id})}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" th:value="${game.name}"><br>
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type" th:value="${game.type}"><br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" th:value="${game.description}"><br>
+        <button type="submit">Update Game</button>
+    </form>
+</body>
+</html>

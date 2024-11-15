@@ -1,0 +1,24 @@
+<!-- src/main/resources/templates/add_game.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Game</title>
+</head>
+<body>
+    <h1>Add New Game</h1>
+	<div>
+        <a href="/" th:href="@{/}">
+            <button>Back to Home</button>
+        </a>
+    </div>
+    <form action="#" th:action="@{/games/add}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type"><br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description"><br>
+        <button type="submit">Add Game</button>
+    </form>
+</body>
+</html>

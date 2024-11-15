@@ -1,0 +1,14 @@
+<!-- src/main/resources/templates/index.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Board Game Manager</title>
+</head>
+<body>
+    <h1>Welcome to Board Game Manager</h1>
+    <nav>
+        <a href="/games" th:href="@{/games}">View Games</a> | 
+        <a href="/games/add" th:href="@{/games/add}">Add New Game</a>
+    </nav>
+</body>
+</html>

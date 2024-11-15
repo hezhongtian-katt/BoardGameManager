@@ -1,0 +1,33 @@
+<!-- src/main/resources/templates/game_list.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Game List</title>
+</head>
+<body>
+    <h1>Game List</h1>
+	<div>
+        <a href="/" th:href="@{/}">
+            <button>Back to Home</button>
+        </a>
+    </div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        <tr th:each="game : ${games}">
+            <td th:text="${game.name}">Game Name</td>
+            <td th:text="${game.type}">Game Type</td>
+            <td th:text="${game.description}">Game Description</td>
+            <td>
+                <a th:href="@{/games/{id}(id=${game.id})}">Details</a> | 
+                <a th:href="@{/games/update/{id}(id=${game.id})}">Edit</a> | 
+                <a th:href="@{/games/delete/{id}(id=${game.id})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
