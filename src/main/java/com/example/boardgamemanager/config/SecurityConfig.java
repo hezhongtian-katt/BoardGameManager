@@ -25,7 +25,7 @@ public class SecurityConfig {
         http
             .csrf().disable() 
             .authorizeRequests()
-                .requestMatchers("/login", "/signup").permitAll()  // 允许未登录的请求
+                .requestMatchers("/login", "/signup", "/styles.css").permitAll()  // 允许未登录的请求
                 .anyRequest().authenticated()  // 其他请求需要认证
             .and()
             .formLogin()

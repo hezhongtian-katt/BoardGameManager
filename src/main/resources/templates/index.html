@@ -2,18 +2,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Board Game Manager</title>
+	<link rel="stylesheet" href="/styles.css">
+	<div th:replace="~{_header}"></div>
 </head>
-<body>
-    <h1>Welcome to Board Game Manager</h1>
-    <nav>
-        <a href="/games" th:href="@{/games}">View Games</a> | 
-        <a href="/games/add" th:href="@{/games/add}">Add New Game</a>
-    </nav>
-	
-	<!-- 登出按钮 -->
-	    <form action="#" th:action="@{/logout}" method="post">
-	        <button type="submit">Logout</button>
-	    </form>
-</body>
 </html>

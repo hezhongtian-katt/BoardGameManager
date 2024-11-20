@@ -1,0 +1,20 @@
+<!-- _header.html -->
+<header>
+    <div class="header-container">
+        <!-- 顶部内容 -->
+        <h1>Welcome to Board Game Manager</h1>
+        <div class="user-info">
+            <span id="username" th:text="${username}"></span>
+            <a class="logout-link" href="/logout">Logout</a>
+        </div>
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="/games" th:href="@{/games}">View Games</a></li>
+                <li><a href="/games/add" th:href="@{/games/add}">Add New Game</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
