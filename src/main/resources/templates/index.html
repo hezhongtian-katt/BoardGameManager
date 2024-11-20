@@ -10,5 +10,10 @@
         <a href="/games" th:href="@{/games}">View Games</a> | 
         <a href="/games/add" th:href="@{/games/add}">Add New Game</a>
     </nav>
+	
+	<!-- 登出按钮 -->
+	    <form action="#" th:action="@{/logout}" method="post">
+	        <button type="submit">Logout</button>
+	    </form>
 </body>
 </html>
