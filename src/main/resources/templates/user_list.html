@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <div th:replace="~{_header}"></div>
+</head>
+<body>
+    <h1>User List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Enabled</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.username}">Username</td>
+                <td th:text="${user.enabled ? 'Enabled' : 'Disabled'}">Enabled</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

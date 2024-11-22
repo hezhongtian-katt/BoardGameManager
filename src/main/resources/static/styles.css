@@ -57,25 +57,6 @@ h2 {
     background-color: #45a049;
 }
 
-/* 返回登录按钮 */
-.back-to-login {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.back-to-login a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #2196F3;
-    color: white;
-    border-radius: 4px;
-    text-decoration: none;
-}
-
-.back-to-login a:hover {
-    background-color: #0b7dda;
-}
-
 /* Header 样式 */
 header {
     background-color: #4CAF50;
@@ -116,11 +97,11 @@ header {
     text-decoration: underline;
 }
 
+/* 导航栏 */
 .nav-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
 }
 
 nav ul {
@@ -131,12 +112,33 @@ nav ul {
     gap: 20px;
 }
 
+/* 普通导航项样式 */
+nav ul li {
+    display: inline-block;
+}
+
+/* 链接样式 */
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: white;
     font-size: 16px;
 }
 
 nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* "Back to Home" 样式 */
+.back-home-container {
+    margin-left: auto;
+}
+
+.back-home {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.back-home:hover {
     text-decoration: underline;
 }

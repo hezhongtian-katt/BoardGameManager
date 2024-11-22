@@ -13,8 +13,13 @@
         <nav>
             <ul>
                 <li><a href="/games" th:href="@{/games}">View Games</a></li>
-                <li><a href="/games/add" th:href="@{/games/add}">Add New Game</a></li>
+                <li th:if="${authority == 'ROLE_ADMIN'}"><a href="/games/add" th:href="@{/games/add}">Add New Game</a></li>
+				<li th:if="${authority == 'ROLE_ADMIN'}"><a href="/users" th:href="@{/users}">User List</a></li>
+                <li th:if="${authority == 'ROLE_ADMIN'}"><a href="/signup" th:href="@{/signup}">Add User</a></li>
             </ul>
         </nav>
+		<div class="back-home-container">
+		        <a class="back-home" href="/" th:href="@{/}">Back to Home</a>
+		</div>
     </div>
 </header>
