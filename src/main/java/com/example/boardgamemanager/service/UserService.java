@@ -1,6 +1,10 @@
 package com.example.boardgamemanager.service;
 
 import com.example.boardgamemanager.model.User;
+import com.example.boardgamemanager.repository.UserRepository;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -12,6 +16,9 @@ public class UserService {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
+    
+    @Autowired
+    private UserRepository userRepository;
 
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
@@ -25,5 +32,7 @@ public class UserService {
         jdbcTemplate.update(authoritySql, user.getUsername(), "ROLE_USER");  // 默认角色
     }
 
-    // 其他用户操作...
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
+    }
 }
